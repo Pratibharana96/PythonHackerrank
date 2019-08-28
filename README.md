@@ -1,2 +1,2 @@
 # PythonHackerrank
-Covered all Challanges faced in Hackerrank
+Covered all Challenges faced in Hackerrank

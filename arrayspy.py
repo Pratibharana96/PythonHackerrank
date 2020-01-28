@@ -20,3 +20,45 @@ print(numbers_array[2:5]) # 3rd to 5th
 print(numbers_array[:-5]) # beginning to 4th
 print(numbers_array[5:])  # 6th to end
 print(numbers_array[:])   # beginning to end
+
+*****************************************************adding items and deleting item in array********************************************
+import array as arr
+numbers = arr.array('i', [1, 2, 3, 5, 7, 10])
+# changing first element
+numbers[0] = 0    
+print(numbers)     # Output: array('i', [0, 2, 3, 5, 7, 10])
+# changing 3rd to 5th element
+numbers[2:5] = arr.array('i', [4, 6, 8])   
+print(numbers)     # Output: array('i', [0, 2, 4, 6, 8, 10])
+
+#append() in arary and extend () used to add severalitems in the array
+numbers.append(3)
+print(numbers)
+
+#extend()
+numbers.extend([5,6,8])
+print(numbers)
+
+#We can concatenate two arrays using + operator.
+odd= arr.array('i',[1,3,4])
+even= arr.array('i',[2,4,6])
+
+number = arr.array('i') #creating empty array of integer
+number = odd + even
+print(number)
+
+
+#How to remove/delete elements?
+#We can delete one or more items from an array using Python's del
+#statement.
+
+del(number[3])
+print(number)
+
+
+#remove() method to remove the given item, and pop()
+number.remove(1)
+print(number)
+
+print(number.pop(3))
+print(number)

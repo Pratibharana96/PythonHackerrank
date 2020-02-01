@@ -226,3 +226,139 @@ reverse3([7, 2, 3]) → [3, 2, 7]	[3, 2, 7]	OK
 other tests
 OK
 
+********************************************************Problem 9*******************************************************************
+
+
+
+Given an array of ints, return the sum of the first 2 elements in the array. If the array length is less than 2, just sum up the elements that exist, returning 0 if the array is length 0.
+
+
+sum2([1, 2, 3]) → 3
+sum2([1, 1]) → 2
+sum2([1, 1, 1, 1]) → 2
+
+*******************************************************Solution 9**************************************************************
+def sum2(nums):
+  if len(nums) == 0:
+    return 0
+  elif len(nums) < 2:
+    return nums[0]
+   
+  return nums[0]+nums[1]
+     
+
+
+
+
+*****************************************************Test Cases 9 **************************************************************
+
+Expected        	Run		
+sum2([1, 2, 3]) → 3	3	OK	
+sum2([1, 1]) → 2	2	OK	
+sum2([1, 1, 1, 1]) → 2	2	OK	
+sum2([1, 2]) → 3	3	OK	
+sum2([1]) → 1	1	OK	
+sum2([]) → 0	0	OK	
+sum2([4, 5, 6]) → 9	9	OK	
+sum2([4]) → 4	4	OK	
+other tests
+OK
+
+********************************************************Problem 10*******************************************************************
+
+
+
+Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle elements.
+
+
+middle_way([1, 2, 3], [4, 5, 6]) → [2, 5]
+middle_way([7, 7, 7], [3, 8, 0]) → [7, 8]
+middle_way([5, 2, 9], [1, 4, 5]) → [2, 4]
+
+*******************************************************Solution 10**************************************************************
+def middle_way(a, b):
+  return [a[1],b[1]]
+  
+
+
+
+
+*****************************************************Test Cases 10 **************************************************************
+
+Expected                              	Run		
+middle_way([1, 2, 3], [4, 5, 6]) → [2, 5]	[2, 5]	OK	
+middle_way([7, 7, 7], [3, 8, 0]) → [7, 8]	[7, 8]	OK	
+middle_way([5, 2, 9], [1, 4, 5]) → [2, 4]	[2, 4]	OK	
+middle_way([1, 9, 7], [4, 8, 8]) → [9, 8]	[9, 8]	OK	
+middle_way([1, 2, 3], [3, 1, 4]) → [2, 1]	[2, 1]	OK	
+middle_way([1, 2, 3], [4, 1, 1]) → [2, 1]	[2, 1]	OK	
+other tests
+OK
+
+********************************************************Problem 11*******************************************************************
+
+
+Given an array of ints, return a new array length 2 containing the first and last elements from the original array. The original array will be length 1 or more.
+
+
+make_ends([1, 2, 3]) → [1, 3]
+make_ends([1, 2, 3, 4]) → [1, 4]
+make_ends([7, 4, 6, 2]) → [7, 2]
+
+*******************************************************Solution 11**************************************************************
+def make_ends(nums):
+  return [nums[0],nums[-1]]
+  
+
+
+
+
+*****************************************************Test Cases 11 **************************************************************
+Expected	                Run		
+make_ends([1, 2, 3]) → [1, 3]	[1, 3]	OK	
+make_ends([1, 2, 3, 4]) → [1, 4]	[1, 4]	OK	
+make_ends([7, 4, 6, 2]) → [7, 2]	[7, 2]	OK	
+make_ends([1, 2, 2, 2, 2, 2, 2, 3]) → [1, 3]	[1, 3]	OK	
+make_ends([7, 4]) → [7, 4]	[7, 4]	OK	
+make_ends([7]) → [7, 7]	[7, 7]	OK	
+make_ends([5, 2, 9]) → [5, 9]	[5, 9]	OK	
+make_ends([2, 3, 4, 1]) → [2, 1]	[2, 1]	OK	
+other tests
+OK
+********************************************************Problem 12*******************************************************************
+
+
+
+Given an int array length 2, return True if it contains a 2 or a 3.
+
+
+has23([2, 5]) → True
+has23([4, 3]) → True
+has23([4, 5]) → False
+
+*******************************************************Solution 12**************************************************************
+def has23(nums):
+  if nums[0] == 2 or nums[1] == 3 or nums[0] == 3 or nums[1] == 2:
+    return True
+  return False
+  
+  
+
+
+
+
+*****************************************************Test Cases 12 **************************************************************
+Expected          	Run		
+has23([2, 5]) → True	True	OK	
+has23([4, 3]) → True	True	OK	
+has23([4, 5]) → False	False	OK	
+has23([2, 2]) → True	True	OK	
+has23([3, 2]) → True	True	OK	
+has23([3, 3]) → True	True	OK	
+has23([7, 7]) → False	False	OK	
+has23([3, 9]) → True	True	OK	
+has23([9, 5]) → False	False	OK	
+other tests
+OK
+other tests
+OK
